@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Weather Now</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <div class="container">
+    <header>
+      <h1>Weather Now</h1>
+      <div class="unit-toggle">
+        <button id="celsius" class="active">°C</button>
+        <button id="fahrenheit">°F</button>
+      </div>
+    </header>
+
+    <h2>How’s the sky looking today?</h2>
+
+    <div class="search-box">
+      <input type="text" id="cityInput" placeholder="Search for a place..." />
+      <button onclick="searchWeather()">Search</button>
+    </div>
+
+    <div class="weather-card" id="weatherCard">
+      <h3 id="location">--</h3>
+      <div class="temp" id="temperature">--°</div>
+      <p id="description">--</p>
+
+      <div class="details">
+        <div>Humidity: <span id="humidity">--</span>%</div>
+        <div>Wind: <span id="wind">--</span> km/h</div>
+      </div>
+    </div>
+
+    <h3>Hourly Forecast</h3>
+    <div class="hourly" id="hourly"></div>
+
+    <h3>7-Day Forecast</h3>
+    <div class="daily" id="daily"></div>
+
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
